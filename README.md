@@ -33,7 +33,7 @@ import 'package:spinning_wheel_button/spinning_wheel_button.dart';
 
 ### Simple usage 
 
-```
+```dart
 class MyHomePage extends StatelessWidget {
 
   @override
