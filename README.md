@@ -1,8 +1,6 @@
 ## Features
 
-This package provides a circular spinning wheel with up to 8 buttons.  
-It’s designed to be visually appealing and highly customizable.  
-Feel free to tailor it to your needs and make it look beautiful!
+This package provides a circular spinning wheel with up to 8 buttons. It’s designed to be visually appealing and highly customizable. Feel free to tailor it to your needs and make it look beautiful!
 
 ## Preview
 ![Spinning Wheel Example](demo.gif)
@@ -133,7 +131,49 @@ class MyHomePage extends StatelessWidget {
 }
 ```
 
-You can add up to 8 buttons and customize the central button (centerWidget) to include any functionality you desire. Lines can also be added, so feel free to use it as creatively as you'd like!
+You can add up to 8 buttons and customize the central button (centerWidget) to include any functionality you desire.
+
+## Class Parameters
+
+### 1. CircleDiagonalLinePainter Class
+
+| Parameter         | Type     | Description                                         | Default Value      |
+|-------------------|----------|-----------------------------------------------------|--------------------|
+| `numberOfButtons` | `int`    | The number of buttons on the wheel                  | **Required**       |
+| `lineColor`       | `Color`  | The color of the diagonal lines                     | `Color(0xFFffffff)`|
+| `strokeWidth`     | `double` | The width (thickness) of the lines                  | `2`                |
+| `lineEnd`         | `double` | The distance from the center to the end of the lines| `2`                |
+
+---
+
+### 2. EachButton Class
+
+| Parameter          | Type            | Description                                     | Default Value      |
+|--------------------|-----------------|-------------------------------------------------|--------------------|
+| `buttonSizeWidth`  | `double?`       | The width of the button                         | `56`               |
+| `buttonSizeHeight` | `double?`       | The height of the button                        | `56`               |
+| `imagePath`        | `String?`       | The path to the image displayed on the button   | `None`             |
+| `icon`             | `IconData?`     | The icon displayed on the button                | `None`             |
+| `imageOrIconColor` | `Color?`        | The color of the image or icon                  | `Colors.black`     |
+| `label`            | `String?`       | The label text displayed below the button       | `None`             |
+| `imageSize`        | `double`        | The size of the image or icon                   | `24`               |
+| `labelStyle`       | `TextStyle?`    | The text style for the label                    | `None`             |
+| `onTap`            | `VoidCallback?` | The callback function triggered when the button is clicked | `None`     |
+
+---
+
+### 3. WheelButton Class
+
+| Parameter          | Type                | Description                                     | Default Value      |
+|--------------------|---------------------|-------------------------------------------------|--------------------|
+| `bottom`           | `double`            | The position of the widget from the bottom      | `0`                |
+| `containerSize`    | `double`            | The size (diameter) of the spinning wheel container | `300`         |
+| `containerBgColor` | `Color`             | The background color of the spinning wheel container | `Colors.white` |
+| `borderColor`      | `Color`             | The color of the border around the wheel        | `Color(0xFFE7E6E4)`|
+| `borderWidth`      | `double`            | The width of the border around the wheel        | `1.0`              |
+| `buttons`          | `List<EachButton>`  | A list of buttons to be displayed on the wheel (max 8 buttons) | **Required** |
+| `showLines`        | `bool`              | Whether to show dividing lines between buttons  | `false`            |
+| `centerWidget`     | `Widget?`           | The widget displayed at the center of the wheel | `None`             |
 
 
 ## Author 
